@@ -2,7 +2,7 @@
 
 // O: string
 // I: string, length
-// C: 
+// C: N/A
 // E:
 
 1.3
