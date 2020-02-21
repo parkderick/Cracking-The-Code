@@ -38,6 +38,7 @@ export class LinkedList {
         return true; 
       } 
       current = current.next 
-    } return f;
+    } 
+    return false;
   }
 }
