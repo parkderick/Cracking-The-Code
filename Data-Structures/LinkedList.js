@@ -1,17 +1,17 @@
 class Node {
-  constructor (value) {
-    this.value = value;
+  constructor (input) {
+    this.value = input;
     this.next = null;
   }
 }
   
-module.exports = class LinkedList {
+class LinkedList {
   constructor() {
     this.head = null;
     this.tail = null;
   }
-  addToHead = value => {
-    var node = new Node(value);
+  addToHead = input => {
+    var node = new Node(input);
     var current;
     if (!this.head) { 
       this.head = node;
@@ -45,10 +45,13 @@ module.exports = class LinkedList {
   }
 }
 
-// var LList = new LinkedList();
+// var LList = new LinkedList;
 // LList.addToHead(1);
 // LList.addToHead(6);
 // LList.addToHead(6);
 // LList.addToHead(1);
 // LList.removeHead();
 // console.log(LList.contains(6));
+// console.log(LList);
+
+module.exports = LinkedList
