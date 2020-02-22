@@ -39,7 +39,7 @@ class LinkedList {
       if (current.value === target) { 
         return true; 
       } 
-      current = current.next ;
+      current = current.next;
     } 
     return false;
   }
@@ -54,4 +54,4 @@ class LinkedList {
 // console.log(LList.contains(6));
 // console.log(LList);
 
-module.exports = LinkedList
+module.exports = LinkedList;
