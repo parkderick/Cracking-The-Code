@@ -14,12 +14,12 @@ module.exports = class LinkedList {
     var node = new Node(value);
     var current;
     if (!this.head) { 
-      this.head = node 
+      this.head = node;
     } else { 
       current = this.head; 
     }
     while (current && current.next) { 
-      current = current.next 
+      current = current.next;
     } 
     if (current) {
       current.next = node;
@@ -29,17 +29,17 @@ module.exports = class LinkedList {
     if (this.head === null) { 
       return null; 
     }
-    var currentHead = this.head
-    this.head = this.head.next
-    return currentHead.value
+    var currentHead = this.head;
+    this.head = this.head.next;
+    return currentHead.value;
   }
   contains = target => {
-    var current = this.head
+    var current = this.head;
     while (current) { 
       if (current.value === target) { 
         return true; 
       } 
-      current = current.next 
+      current = current.next ;
     } 
     return false;
   }
