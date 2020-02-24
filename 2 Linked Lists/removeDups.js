@@ -28,32 +28,11 @@ function removeDups(linkedList) {
 // Time: O(n)
 // Space: O(n)
 
-// var LList = new LinkedList();
-// LList.addToHead(1);
-// LList.addToHead(6);
-// LList.addToHead(6);
-// LList.addToHead(10);
+/* TEST */
+var LList = new LinkedList();
+LList.addToHead(1);
+LList.addToHead(6);
+LList.addToHead(6);
+LList.addToHead(10);
 
-// console.log(JSON.stringify(removeDups(LList)));
-
-// console.log(removeDups(
-//   {
-//     head: {
-//       value: 1,
-//       next: {
-//         value: 6,
-//         next: {
-//           value: 6,
-//           next: {
-//             value: 10,
-//             next: null
-//           }
-//         }
-//       }
-//     },
-//     tail: {
-//       value: 10
-//       next: null
-//     }
-//   }
-// ))
+console.log(removeDups(LList));
