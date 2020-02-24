@@ -1,3 +1,5 @@
+const LinkedList = require('../Data-Structures/LinkedList');
+
 // Return Kth to Last: Implement an algorithm to find the kth to last element of a singly linked list.
 
 2.2
@@ -8,15 +10,23 @@ function kthToLast (linkedList, n) {
     [size]: current
   };
   while(current.next) {
-    size++
+    size++;
     obj[size] = current.next;
     current = current.next;
   }
-  return obj[size - n]
+  return obj[size - n];
 }
 
 // Time: O(n)
 // Space: O(n)
+
+// var LList = new LinkedList();
+// LList.addToHead(1);
+// LList.addToHead(6);
+// LList.addToHead(6);
+// LList.addToHead(10);
+
+// console.log(JSON.stringify(kthToLast(LList, 2)));
 
 // console.log(kthToLast(
 //   {
