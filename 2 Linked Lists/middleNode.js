@@ -1,4 +1,4 @@
-const LinkedList = require('../Data-Structures/LinkedList');
+const {LinkedList} = require('../Data-Structures/LinkedList');
 
 // Delete Middle Node: Implement an algorithm to delete a node in the middle (i.e., any node but the first and last node, not necessarily the exact middle) of a singly linked list, given only access to that node.
 // EXAMPLE
@@ -16,11 +16,11 @@ function middleNode (linkedList, node) {
   var previous = current;
   while(current.next) {
     if (current.value === node) {
-      previous.next = current.next
+      previous.next = current.next;
     } else {
-      previous = current
+      previous = current;
     }
-    current = current.next
+    current = current.next;
   }
   return linkedList;
 }
@@ -28,12 +28,13 @@ function middleNode (linkedList, node) {
 // Time: O(n)
 // Space: O(1)
 
-// var LList = new LinkedList();
-// LList.addToHead(1);
-// LList.addToHead(6);
-// LList.addToHead(4);
-// LList.addToHead(5);
-// LList.addToHead(9);
-// LList.addToHead(10);
+/* TEST */
+var LList = new LinkedList();
+LList.addToHead(1);
+LList.addToHead(6);
+LList.addToHead(4);
+LList.addToHead(5);
+LList.addToHead(9);
+LList.addToHead(10);
 
-// console.log(JSON.stringify(middleNode(LList, 5)));
+console.log(middleNode(LList, 5));
