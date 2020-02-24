@@ -1,4 +1,4 @@
-const LinkedList = require('../Data-Structures/LinkedList')
+const LinkedList = require('../Data-Structures/LinkedList');
 
 // Remove Dups: Write code to remove duplicates from an unsorted linked list.
 
@@ -19,7 +19,7 @@ function removeDups(linkedList) {
     } else {
       previous.next = current.next;
     }
-    linkedList.tail = current
+    linkedList.tail = current;
     current = current.next;
   }
   return linkedList;
