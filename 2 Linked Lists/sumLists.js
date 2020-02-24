@@ -7,6 +7,11 @@ const {LinkedList, Node} = require('../Data-Structures/LinkedList');
 // Suppose the digits are stored in forward order. Repeat the above problem. EXAMPLE
 // Input: (6 -) 1 -) 7) + (2 -) 9 -) 5).Thatis,617 + 295. Output: 9 -) 1 -) 2.That is, 912.
 
+// O: linkedList
+// I: 2 linkedList
+// C: N/A
+// E: N/A
+
 2.5
 function SumLists(linkedList1, linkedList2) {
   var current1 = linkedList1.head;
@@ -43,16 +48,16 @@ function SumLists(linkedList1, linkedList2) {
 // Time: O(n)
 // Space: O(n)
 
-// var LList1 = new LinkedList();
-// LList1.addToHead(1);
-// LList1.addToHead(4);
-// LList1.addToHead(6);
-// LList1.addToHead(1);
+var LList1 = new LinkedList();
+LList1.addToHead(1);
+LList1.addToHead(4);
+LList1.addToHead(6);
+LList1.addToHead(1);
 
-// var LList2 = new LinkedList();
-// LList2.addToHead(3);
-// LList2.addToHead(5);
-// LList2.addToHead(7);
-// LList2.addToHead(8);
+var LList2 = new LinkedList();
+LList2.addToHead(3);
+LList2.addToHead(5);
+LList2.addToHead(7);
+LList2.addToHead(8);
 
-// console.log(JSON.stringify(SumLists(LList1, LList2)));
+console.log(SumLists(LList1, LList2));
