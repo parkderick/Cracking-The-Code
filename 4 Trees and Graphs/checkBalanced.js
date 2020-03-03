@@ -1,3 +1,5 @@
+const BinarySearchTree = require('../Data-Structures/BinarySearchTree.js');
+
 function checkBalanced(BT) {
     if (!BT.left && !BT.right) {
       return true;
@@ -13,49 +15,16 @@ function checkBalanced(BT) {
     }
       return Math.abs(leftHeight - rightHeight) <= 1
   }
-
-console.log(checkBalanced({ 
-  value: 6,
-  left: { 
-    value: 2,
-    left: {
-      value: 0,
-      left: null,
-      right: {
-        value: 3,
-        left: null,
-        right: null
-      }
-    },
-    right: {
-      value: 4,
-      left: null,
-      right: null
-    }
-  },
-  right: {
-    value: 7,
-    left: null,
-    right: {
-      value: 10,
-      left: {
-        value: 8,
-        left: null,
-        right: {
-          value: 9,
-          left: {
-            value: 12,
-            left: null,
-            right: null
-          },
-          right: null
-        }
-      },
-      right: {
-        value: 11,
-        left: null,
-        right: null
-      }
-    }
-  }
-}))
+  
+/* TEST */
+var bst = new BinarySearchTree(6);
+bst.insert(1);
+bst.insert(0);
+bst.insert(2);
+bst.insert(8);
+bst.insert(7);
+bst.insert(9);
+bst.insert(5);
+bst.insert(4);
+bst.insert(11);
+console.log(checkBalanced(bst));
