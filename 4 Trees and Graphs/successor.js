@@ -1,3 +1,5 @@
+const BinarySearchTree = require('../Data-Structures/BinarySearchTree.js');
+
 // Successor: Write an algorithm to find the "next" node (i.e., in-order successor) of a given node in a binary search tree. You may assume that each node has a link to its parent.
 // O: Boolean
 // I: graph, node1, node2
@@ -23,58 +25,15 @@ function successor(node, bst) {
 // Time: O(n)
 // Space: O(n)
 
-console.log(successor(
-  {
-    value: 0,
-    left: null,
-    right: null
-  },
-  { 
-  value: 6,
-  left: { 
-    value: 2,
-    left: {
-      value: 0,
-      left: null,
-      right: {
-        value: 3,
-        left: null,
-        right: {
-          value: 7,
-          left: null,
-          right: null
-        }
-      }
-    },
-    right: {
-      value: 4,
-      left: null,
-      right: null
-    }
-  },
-  right: {
-    value: 7,
-    left: null,
-    right: {
-      value: 10,
-      left: {
-        value: 8,
-        left: null,
-        right: {
-          value: 9,
-          left: null,
-          right: {
-            value: 12,
-            left: null,
-            right: null
-          }
-        }
-      },
-      right: {
-        value: 11,
-        left: null,
-        right: null
-      }
-    }
-  }
-}))
+/* TEST */
+var bst = new BinarySearchTree(6);
+bst.insert(1);
+bst.insert(0);
+bst.insert(2);
+bst.insert(8);
+bst.insert(7);
+bst.insert(9);
+bst.insert(5);
+bst.insert(4);
+bst.insert(11);
+console.log(successor({value: 2}, bst));
